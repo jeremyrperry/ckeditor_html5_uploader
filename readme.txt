@@ -23,20 +23,20 @@ Instructions:
 1.  Install the ckeditor directory on your server.  If you modify the directory names, directory structure, and/or place the directory in any other place than root folder of your website, you will need to modify the header reference code and other code sections accordingly.
 
 2.  If your site doesn't have it already, you will need a jQuery reference.  You can host your own copy or use the CDN provided by jQuery, Google, Microsoft, or another trusted CDN source.  it must preceed any of my custom code.  You must also have a reference to CKEditor's JavaScript reference file before cke_enable.js, my custom code.  Below is an example of how the JavaScript code should look:  
-<pre>
+<xmp>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="ckeditor/cke_enable.js"></script>
-</pre>
+</xmp>
 
 3.  In any textarea that is to become a CKEditor instance, you will need to have a class of ckeditor added to the element (you can modify the class designation from cke_enable.js).  Adding in the element name and id is optional since my code will dynamically do this if you don't, but it is recommended to do so in order to maintain tighter control of the form submission process.
--Example with no name or id element:  <pre><textarea class="ckeditor"></textarea></pre>
--Example with name and id element:  <pre><textarea class="ckeditor" name="cke1" id="cke1" ></textarea></pre>
+-Example with no name or id element:  <xmp><textarea class="ckeditor"></textarea></xmp>
+-Example with name and id element:  <xmp><textarea class="ckeditor" name="cke1" id="cke1" ></textarea></xmp>
 --Either way works.--
 
 4.  My code will detect the textarea's parent form element and add in a necessary class that ensures the CKEditor instance will properly save your content for submission, but if you want to do this yourself, add in the class of has_cke (you can modify the class designation from cke_enable.js).
--No-class Example:  <pre><form action="" method="post"></pre>
--Class example:  <pre><form action="" method="post" class="has_cke"></pre>
+-No-class Example:  <xmp><form action="" method="post"></xmp>
+-Class example:  <xmp><form action="" method="post" class="has_cke"></xmp>
 
 5.  Short of making more advanced changes to the code and file upload/storage structure (and please feel free to do so as necessary), you are set to go!  Additional advanced instructions are in each custom piece of code.
 
